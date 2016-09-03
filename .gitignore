@@ -1,0 +1,3 @@
+#ignore config file so that no credentials are leaked
+#an example config file will be still betracked
+dbm-wp-management-scripts.config
