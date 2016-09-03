@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #backup_staging.sh
 #Dean Murray, 2016-09-03
 

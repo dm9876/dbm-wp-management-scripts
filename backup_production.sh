@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #backup_production.sh
 #Dean Murray, 2016-09-03
 
@@ -33,13 +31,12 @@ mv -f backup.sql.gz $DATE-production-db.sql.gz
 
 #based on this script being run daily, remove both files which are from X days ago
 OLDDATE=$(date -d "-$DAYS_TO_KEEP days" +%Y%m%d)
-rm $OLDDATE-production-files.tar.gz
-rm $OLDDATE-production-db.sql.gz
+rm $BACKUP_DIR/$OLDDATE-production-files.tar.gz
+rm $BACKUP_DIR/$OLDDATE-production-db.sql.gz
 
-#TODO if dropbox upload is installed then
-#if it is the first of day of the month
+#requires dropbox_uploader to be installed and configured
+#https://github.com/andreafabrizi/Dropbox-Uploader
+#if it is the first of day of the month then upload the two backup files
 if [ $(date +%d) = "01" ]; then
-    echo "upload both files to dropbox"
-    echo $DATE-production-files.tar.gz
-    echo $DATE-production-db.sql.gz
+    ~/dropbox_uploader/dropbox_uploader.sh -f ~/.dropbox_uploader upload $BACKUP_DIR/$DATE-production-* /
 fi
