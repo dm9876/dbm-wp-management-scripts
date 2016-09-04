@@ -15,3 +15,6 @@ WEBROOT_DIR=~/public_html
 
 #number of days to keep local backup of production site
 DAYS_TO_KEEP=8
+
+#path to php bin
+PHP_BIN=/usr/php/56/bin/php

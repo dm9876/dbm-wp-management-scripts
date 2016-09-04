@@ -42,7 +42,4 @@ sed -i "/DB_PASSWORD/c\define('DB_PASSWORD', '$S_DBPASS');" ./wp-config.php
 sed -i "/DB_HOST/c\define('DB_HOST', '$DBHOST');" ./wp-config.php
 
 #TODO search and replace references in the database
-#Replace: http://www.berowrabaptist.org.au
-#With: http://staging.berowrabaptist.org.au
-#Replace: /public_html/
-#With: /public_html/staging/
+$PHP_BIN ~/Search-Replace-DB-master/srdb.cli.php -h $DBHOST -u $S_DBUSER -n $S_DBNAME -p $S_DBPASS -s "findMe" -r "replaceMe" --dry-run
