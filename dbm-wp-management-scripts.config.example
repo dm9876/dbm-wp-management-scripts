@@ -1,1 +1,17 @@
-#nothing here yet
+#these variables can be set to match what is in the wp-config.php file
+
+P_DBNAME=dbm_wp-production
+P_DBPASS=123456
+P_DBUSER=dbm_wp-prod
+
+S_DBNAME=dbm_wp-staging
+S_DBPASS=123456
+S_DBUSER=dbm_wp-stg
+
+DBHOST=localhost
+
+BACKUP_DIR=~/dbm-wp-backups
+WEBROOT_DIR=~/public_html
+
+#number of days to keep local backup of production site
+DAYS_TO_KEEP=8
