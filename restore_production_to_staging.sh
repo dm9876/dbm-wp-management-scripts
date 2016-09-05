@@ -41,5 +41,16 @@ sed -i "/DB_USER/c\define('DB_USER', '$S_DBUSER');" ./wp-config.php
 sed -i "/DB_PASSWORD/c\define('DB_PASSWORD', '$S_DBPASS');" ./wp-config.php
 sed -i "/DB_HOST/c\define('DB_HOST', '$DBHOST');" ./wp-config.php
 
-#TODO search and replace references in the database
-$PHP_BIN ~/Search-Replace-DB-master/srdb.cli.php -h $DBHOST -u $S_DBUSER -n $S_DBNAME -p $S_DBPASS -s "findMe" -r "replaceMe" --dry-run
+#search and replace references in the database
+#modify db references from production to staging
+
+#Replace: production url
+#With: staging url
+
+$PHP_BIN ~/Search-Replace-DB-master/srdb.cli.php -h $DBHOST -u $S_DBUSER -n $S_DBNAME -p $S_DBPASS -s "$PRODUCTION_URL" -r "$STAGING_URL"
+
+#only do this part once, multiple search and replace with this criteria will break the db
+#Replace: /public_html/
+#With: /public_html/staging/
+
+$PHP_BIN ~/Search-Replace-DB-master/srdb.cli.php -h $DBHOST -u $S_DBUSER -n $S_DBNAME -p $S_DBPASS -s "/public_html/" -r "/public_html/staging/"

@@ -18,3 +18,7 @@ DAYS_TO_KEEP=8
 
 #path to php bin
 PHP_BIN=/usr/php/56/bin/php
+
+#for db search and replace
+STAGING_URL=http://staging.mysite.com
+PRODUCTION_URL=http://www.mysite.com
