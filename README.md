@@ -14,8 +14,8 @@ http://staging.*
 - backups are stored in folder at the same level ~/dbm-wp-backups
 
 ### Other tools ###
-- php Search-Replace-DB tool
-- dropbox uploader
+https://github.com/interconnectit/Search-Replace-DB
+https://github.com/andreafabrizi/Dropbox-Uploader
 
 ### TODO maybe ###
 - add gpg encryption of backup files
@@ -26,7 +26,7 @@ http://staging.*
 
 ### dbm-wp-management-scripts.config ###
 - defines variables for various credentials
-- modify and rename dbm-wp-management-scripts.config.example 
+- modify and rename dbm-wp-management-scripts.config.example
 - TODO consider to also remove more hard-coded paths as possible and define them here.
 
 ### backup_staging.sh ###
@@ -40,8 +40,3 @@ http://staging.*
 ### restore_staging_to_production.sh ###
 
 ### restore_production_to_staging.sh ###
-
-
-
-
-

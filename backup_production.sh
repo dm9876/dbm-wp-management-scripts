@@ -6,7 +6,7 @@
 #overwrites any previous backups for the same date
 #typically run as a daily cron job
 
-source ./dbm-wp-management-scripts.config
+source ~/dbm-wp-management-scripts/dbm-wp-management-scripts.config
 
 #check if backups folder exists and if not then create it
 if [ ! -d "$BACKUP_DIR" ]; then

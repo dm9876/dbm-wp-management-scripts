@@ -5,7 +5,7 @@
 #uses the archives created by backup_production.sh
 #run this script interactively and identify the date of files to restore
 
-source ./dbm-wp-management-scripts.config
+source ~/dbm-wp-management-scripts/dbm-wp-management-scripts.config
 
 ls $BACKUP_DIR/*production*
 

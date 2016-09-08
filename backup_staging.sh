@@ -7,7 +7,7 @@
 #typically run ad-hoc, when you are ready to push staging to production
 #typically followed by running restore_staging_to_production.sh
 
-source ./dbm-wp-management-scripts.config
+source ~/dbm-wp-management-scripts/dbm-wp-management-scripts.config
 
 #check if backups folder exists and if not then create it
 if [ ! -d "$BACKUP_DIR" ]; then

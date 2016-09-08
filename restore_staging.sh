@@ -4,7 +4,7 @@
 #script to restore wordpress staging site, uses the archives created by backup_staging.sh
 #run this script interactively and identify the date of files to restore
 
-source ./dbm-wp-management-scripts.config
+source ~/dbm-wp-management-scripts/dbm-wp-management-scripts.config
 
 ls $BACKUP_DIR/*staging*
 
